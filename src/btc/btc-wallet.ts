@@ -279,7 +279,7 @@ export class BTCWallet extends Wallet {
       }
     }
     if (undefined === feeRate) {
-      feeRate = (await this.urchain.getFeePerKb()).avgFee;
+      feeRate = (await this.urchain.getFeePerKb()).fastFee;
     }
     const network =
       bitcoinjs.networks[
